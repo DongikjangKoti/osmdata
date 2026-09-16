@@ -33,13 +33,13 @@ BEGIN_RCPP
 END_RCPP
 }
 // rcpp_osmdata_sc_infile
-Rcpp::List rcpp_osmdata_sc_infile(const std::string& st);
-RcppExport SEXP _osmdata_rcpp_osmdata_sc_infile(SEXP stSEXP) {
+Rcpp::List rcpp_osmdata_sc_infile(const std::string& file_path);
+RcppExport SEXP _osmdata_rcpp_osmdata_sc_infile(SEXP file_pathSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const std::string& >::type st(stSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_osmdata_sc_infile(st));
+    Rcpp::traits::input_parameter< const std::string& >::type file_path(file_pathSEXP);
+    rcpp_result_gen = Rcpp::wrap(rcpp_osmdata_sc_infile(file_path));
     return rcpp_result_gen;
 END_RCPP
 }

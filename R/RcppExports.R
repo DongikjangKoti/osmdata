@@ -67,14 +67,17 @@ rcpp_osmdata_sc <- function(st) {
 
 #' rcpp_osmdata_sc_infile
 #'
-#' Return OSM data in silicate (SC) format
+#' Return OSM data in silicate (SC) format, read directly from a local file
+#' rather than from the text of an overpass API query. Intended for large
+#' national-scale extracts (osmconvert output) which cannot be held twice in
+#' memory.
 #'
-#' @param st Text contents of an overpass API query
+#' @param file_path Path to a local OSM XML (.osm) file
 #' @return Rcpp::List objects of OSM data
-#' 
-#' @noRd 
-rcpp_osmdata_sc_infile <- function(st) {
-    .Call(`_osmdata_rcpp_osmdata_sc_infile`, st)
+#'
+#' @noRd
+rcpp_osmdata_sc_infile <- function(file_path) {
+    .Call(`_osmdata_rcpp_osmdata_sc_infile`, file_path)
 }
 
 #' get_osm_relations

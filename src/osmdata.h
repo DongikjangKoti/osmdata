@@ -557,8 +557,7 @@ void get_osm_nodes (Rcpp::DataFrame &node_df, Rcpp::DataFrame &kv_df,
 
 Rcpp::List rcpp_osmdata_sc (const std::string& st);
 
-Rcpp::List rcpp_osmdata_sc_infile (const std::string& st);
-
+Rcpp::List rcpp_osmdata_sc_infile (const std::string& file_path);
 
 namespace osm_df {
 
